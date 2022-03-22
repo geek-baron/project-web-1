@@ -1,0 +1,567 @@
+/*
+    1- Common Styles
+    2- General Styles
+    3- Sections
+        3.0 Header Section
+        3.1 Breadcrumbs Section
+        3.2 Home Sections
+            3.2.0 Home-Left
+                3.2.0.0 Post-section
+                3.2.0.1 Tags Left Section
+            3.2.1 Home Right
+                3.2.1.0 Category Section
+                3.2.1.1 Populare Section
+                3.2.1.2 Tags Right Section
+                3.2.1.3 Card Section
+                3.2.1.4 Comments Section
+                3.2.1.5 Reply Section
+                3.2.1.6 Footer Section
+*/
+/*
+    1- Common Styles
+        - Section Header
+*/
+
+
+
+
+
+/* 1- Common Style */
+/* Section Header */
+.section-header {
+    text-align: left;
+    margin: 40px 0;
+}
+
+.section-header .section-title {
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.section-header .line {
+    display: block;
+    height: 4px;
+    width: 45px;
+    margin: 0;
+    background-color: var(--mainColor);
+}
+
+
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --mainColor: #6195ff;
+    --grayColor: #999;
+    --bg-gray: rgb(235, 235, 235);
+    --whiteColor: #fff;
+    --blackColor: #000;
+}
+
+body {
+    font-family: 'Varela Round', sans-serif;
+}
+
+h1 ,h2 ,h3 ,h4 ,h5 ,h6 {
+    font-family: inherit;
+}
+
+button {
+    font-family: 'Varela Round', sans-serif;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+.pd-y {
+    padding: 120px 0;
+}
+
+.over-flow {
+    overflow: hidden;
+}
+
+
+/* 3- Sections */
+/* 3.0 Header Section */
+.header {
+    position: fixed;
+    width: 100%;
+    height: 80px;
+    z-index: 10;
+    border-bottom: 1px solid var(--bg-gray);
+    background: var(--whiteColor);
+}
+
+.header .logo {
+    width: 40%;
+    float: left;
+}
+
+.header .logo img {
+    width: 20%;
+    margin-top: 15px;
+}
+
+.header .nav1{
+    width: 60%;
+    float: right;
+    list-style: none;
+}
+
+.header .nav1 {
+    text-align: right;
+}
+
+.header .nav1 > li {
+    display: inline-block;
+    text-align: right;
+}
+
+.header .nav1 > li > a {
+    color: var(--blackColor);
+    font-size: 15px;
+    text-decoration: none;
+    padding: 30px 15px;
+    display: block;
+}
+
+.header .nav1 > li > a.active:after,
+.header .nav1 > li > a:after {
+    content: "";
+    display: block;
+    height: 3px;
+    margin-top: 2px;
+    background-color: var(--mainColor);
+    transition: width .5s;
+}
+
+
+.header .nav1 > li > a:after {
+    width: 0;
+}
+
+.header .nav1 > li > a:hover:after {
+    width: 100%;
+}
+
+.dropdown-menu {
+    position: absolute;
+    background: var(--mainColor);
+    width: 150px;
+    text-align: center;
+    left: -50%;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s, visibility 0.5s;
+}
+
+.dropdown-menu {
+    color: var(--whiteColor);
+    display: block;
+    padding: 10px;
+}
+
+.dropdown:hover .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+}
+
+
+/* 3.1 Breadcrumbs Section */
+.breadcrumb1 {
+    width: 100%;
+    height: 200px;
+    background: var(--bg-gray);
+    overflow: hidden;
+}
+
+.breadcrumb1.pd-y {
+    padding-top: 175px;
+
+}
+
+.breadcrumb-title {
+    float: left;
+    font-weight: bold;
+}
+
+.breadcrumb {
+    padding-top: 10px;
+    float: right;
+}
+
+.breadcrumb-item a {
+    text-decoration: none;
+}
+
+
+/* 3.2 Home Sections */
+.home {
+
+}
+
+
+/* 3.2.0 Home-Right # */
+.container-right {
+    width: 100%;
+    padding-right: 35px;
+    padding-left: 35px;
+    margin-right: auto;
+    margin-left: auto;
+
+}
+
+.home-right {
+    width: 30%;
+    float: right;
+}
+
+.search {
+
+}
+
+
+/* 3.2.1.0 Category Section */
+.category{
+    border-bottom: 1px solid var(--bg-gray);
+}
+
+.category-content {
+    padding: 0;
+}
+
+.category-content li {
+    padding: 5px 0;
+    border-top: 1px solid var(--bg-gray);
+}
+
+.category-item {
+    width: 80%;
+    float: left;
+}
+
+.categort-num {
+    width: 20%;
+    text-align: right;
+    float: right;
+    color: var(--mainColor);
+}
+
+/* 3.2.1.1 Populare Section */
+.popular-post {
+    margin-bottom: 40px;
+}
+
+.popular-post-img {
+    width: 40%;
+    float: left;
+}
+
+.popular-post-img img {
+    width: 100%;
+    height: 100%;
+}
+
+.popular-post-desc {
+    float: right;
+    width: 60%;
+    text-align: left;
+    padding-left: 15px;
+}
+
+.popular-post-desc-title {
+    font-size: 15px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.popular-post-desc-text {
+    font-size: 13px;
+    color: var(--mainColor);
+}
+
+/* 3.2.0 Home-Left # */
+.home-left {
+    width: 70%;
+    float: left;
+}
+
+/* 3.2.0.0 Post-section */
+.post-img img {
+    width: 100%;
+}
+
+.post-icon li{
+    display: inline-block;
+    padding: 20px 5px;
+}
+
+.post-icon li i {
+    color: var(--mainColor);
+}
+
+.post-desc {
+
+}
+
+.post-desc-title {
+    font-weight: bold;
+}
+
+.post-desc-text {
+    color: var(--grayColor);
+    margin-bottom: 10px;
+    line-height: 1.5;
+}
+
+
+/* 3.2.0.1 Tags Left Section 
+   3.2.1.2 Tags Right Section
+*/
+.tag-left {
+    margin: 40px 0;
+}
+
+.tag-left-title {
+    float: left;
+}
+
+.tag-left-content {
+    float: left;
+}
+
+.tag-left-content li,
+.tag-right-content li {
+    display: inline-block;
+    padding: 10px 1px;
+}
+
+.tag-left-content li i {
+    color: var(--mainColor);
+}
+
+.tag-left-content li a,
+.tag-right-content li a {
+    text-decoration: none;
+    padding: 10px;
+    color: var(--blackColor);
+    background: var(--bg-gray);
+}
+
+
+/* 3.2.1.3 Card Section */
+.card1 {
+    padding: 20px;
+    background-clip: border-box;
+    border: 1px solid rgba(0, 0, 0, 0.125);
+    border-radius: 0.25rem;
+}
+
+.card1-img {
+    width: 30%;
+    float: left;
+}
+
+.card1-img img {
+    width: 100%;
+}
+
+.card1-desc {
+    width: 70%;
+    float: right;
+    padding-left: 20px;
+}
+
+.card11-desc-title {
+    padding-bottom: 15px;
+    margin-bottom: 30px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+}
+
+.card1-name {
+    width: 40%;
+    float: left;
+    font-weight: bold;
+    text-transform: capitalize;
+}
+
+.card1-icon {
+    width: 60%;
+    text-align: right;
+    float: right;
+}
+
+.card1-icon li {
+    display: inline-block;
+}
+
+.card1-icon li a {
+    display: block;
+    width: 50px;
+    height: 40px;
+    background: var(--mainColor);
+    color: var(--whiteColor);
+    margin: 0 1px;
+    border-radius: 5%;
+}
+
+.card1-icon li a i {
+    padding: 10px 20px;
+}
+
+.card1-desc-text {
+    color: var(--grayColor);
+    line-height: 1.5rem;
+}
+
+/* 3.2.1.4 Comments Section */
+.comments-box {
+    border: 1px solid rgba(0, 0, 0, 0.125);
+    border-radius: 0.25rem;
+}
+
+.card2-1 {
+    padding: 20px;
+    background-clip: border-box;
+    
+}
+
+.card2-top {
+    padding: 20px;
+    background-clip: border-box;
+    border-top: 1px solid rgba(0, 0, 0, 0.125);
+    border-radius: 0.25rem;
+}
+
+.card2 {
+    padding: 20px;
+    background-clip: border-box;
+    border: 1px solid rgba(0, 0, 0, 0.125);
+    border-radius: 0.25rem;
+}
+
+.card2-img {
+    width: 120px;
+    float: left;
+}
+
+.card2-img img {
+    width: 100%;
+}
+
+.card2-desc {
+    width: 85%;
+    float: right;
+    padding: 0 15px;
+}
+
+.card2-desc-title {
+    display: block;
+}
+
+.card2-name {
+    width: auto;
+    float: left;
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.card2-name span {
+    color: var(--grayColor);
+    font-size: 10px;
+    padding-left: 5px;
+    text-transform: uppercase;
+}
+
+.card2-reply {
+    width: auto;
+    float: right;
+    color: var(--mainColor);
+    text-transform: uppercase;
+}
+
+.card2-text {
+    color: var(--grayColor);
+    line-height: 1.8rem;
+}
+
+.card-pd {
+    margin: 0 15px;
+}
+
+.blue .card2-desc-title .card2-name {
+    color: var(--mainColor);
+}
+
+.card2.blue {
+    background: #d8e4fd;
+}
+
+.card2.less .card2-desc{
+    width: 100%;
+}
+/* 3.2.1.5 Reply Section */
+.replay {
+
+}
+
+.forms-container {
+    margin: 10px;
+}
+
+
+
+.form-comment {
+    padding: 15px 10px;
+}
+
+.form-comment input {
+    height: 100px;
+}
+
+/* 3.2.1.6 Footer Section */
+.footer {
+    background-color: #1c1d21;
+    text-align: center;
+    padding: 60px 0;
+}
+
+.footer-links{
+    list-style: none;
+    margin: 20px 0;
+    padding: 0;
+}
+
+.footer-links li {
+    display: inline-block;
+}
+
+.footer-links li a {
+    display: block;
+    width: 50px;
+    height: 50px;
+    background: var(--mainColor);
+    color: var(--whiteColor);
+    margin: 0 5px;
+    border-radius: 5%;
+}
+
+.footer-links li a i {
+    line-height: 50px;
+}
+
+.footer-copyright {
+    color: var(--grayColor);
+    font-size: 15px;
+    text-transform: uppercase;
+}
